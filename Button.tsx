@@ -3,7 +3,7 @@ import { FC } from "react";
 type ButtonProps = {};
 
 const Button: FC<ButtonProps> = (props) => {
-  return <></>;
+  return <>Hello world!</>;
 };
 
 export default Button;
