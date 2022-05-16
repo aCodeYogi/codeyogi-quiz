@@ -4,20 +4,37 @@ import Input from "./Input";
 export default {
   title: "Input",
   component: Input,
-  argTypes: {},
+  argTypes: {
+    placeholder: {
+      control: {
+        type: "text",
+      },
+    },
+    error: {
+      control: {
+        type: "text",
+      },
+    },
+  },
 } as ComponentMeta<typeof Input>;
 
 const Template: ComponentStory<typeof Input> = (args) => (
   <Input {...args}></Input>
 );
 
-export const Main = Template.bind({});
-Main.args = {
+export const Default = Template.bind({});
+Default.args = {
   placeholder: "email",
 };
 
+export const Disabled = Template.bind({});
+Disabled.args = {
+  value: "prashant@codeyogi.io",
+  disabled: true,
+};
+
 export const WithError = Template.bind({});
-Main.args = {
+WithError.args = {
   value: "suresh",
   error: "Value is not valid",
 };
