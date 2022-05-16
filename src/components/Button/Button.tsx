@@ -6,7 +6,9 @@ type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
   theme?: "primary" | "secondary";
 };
 
+
 const Button: FC<Props> = ({ theme, ...rest }) => {
+
   const themeClasses =
     theme === "primary"
       ? "text-white  bg-yellow-500 border-transparent hover:bg-yellow-600"
